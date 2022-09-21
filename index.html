@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>  
+Email sentence Suggestions 
+</title>
+<style>
+body {
+  margin: 0;
+  height: 45vh;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+.bg {
+  background-image: url("static/email_logos.png");
+  background-attachment: fixed;
+  background-color: BurlyWood;
+  opacity: 0.93;
+}
+div {
+  background-color: Cornsilk;
+  width: 500px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  opacity: 0.95;
+  margin: auto;
+}
+</style>
+</head>
+<body class="bg">
+
+<div>
+  <h2>Email sentence completion</h2>
+  <h3>Enter the sentence and choose if beam search</h3>
+  <form action="/predict" method="post">
+    <label for="input_string">Partial Email/Sentence:</label>
+    <textarea id="input_string" name="input_string" rows="8" cols="60"></textarea><br><br>
+    <input type="checkbox" id="beam_search" name="beam_search" value="True">
+    <label for="beam_search"> Beam Search </label><br><br>
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+</body>
+</html>
